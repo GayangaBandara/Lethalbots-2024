@@ -1,5 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/transformers-2');
-
+@import url('https://fonts.cdnfonts.com/css/game-font-7'); /* Import Game Font 7 */
 
 .newdivc {
   font-family: 'Transformers', sans-serif;
@@ -11,10 +11,51 @@ a {
   color: var(--primary-color);
 }
 
+.welcome-text {
+  font-family: 'Game Font 7', sans-serif; /* Apply Game Font 7 */
+  font-size: 35px;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
 .highhead {
   font-weight: 300;
   font-size: 60px;
   line-height: 1.2;
+}
+
+.animated-lethalbots {
+  font-size: 100px;
+  letter-spacing: 15px;
+  position: relative;
+  animation: glow 1.5s infinite alternate, move 3s ease-in-out infinite;
+  color: #fff;
+  text-shadow: 0 0 15px #ff00002a, 0 0 30px #ff000041, 0 0 45px #ff000028, 0 0 60px #ff000031; /* Initial red glow */
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 15px #ff00002f, 0 0 30px #ff000028, 0 0 45px #ff000031, 0 0 60px #ff000023;
+  }
+  50% {
+    text-shadow: 0 0 20px #00ff0041, 0 0 40px #00ff002c, 0 0 60px #00ff0031, 0 0 80px #00ff002d;
+  }
+  100% {
+    text-shadow: 0 0 15px #0000ff2a, 0 0 30px #0000ff34, 0 0 45px #0000ff3b, 0 0 60px #0000ff38;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
 }
 
 .showcase {
@@ -70,40 +111,37 @@ a {
 
 .btn {
   display: inline-block;
-  padding: 10px 30px;
+  padding: 5px 20px;
   background: var(--primary-color);
   color: #fff;
   border: 1px #fff solid;
   border-radius: 5px;
-  margin-top: 25px;
+  margin-top: 40px;
   opacity: 0.7;
 }
 
 .btn:hover {
   transform: scale(0.98);
+  color: #ffffff;
 }
 
 .social a {
   margin: 0 5px;
 }
-.flicker {
-    -webkit-animation: flicker 2s infinite;
-    text-align:center;
-    font-size:100px;
-    letter-spacing: 20px;
+
+@media only screen and (max-width: 768px) {
+  .flicker {
+    font-size: 55px;
+    letter-spacing: 0px;
   }
   
-  @-webkit-keyframes flicker
-  {
-  0% {opacity:0;}
-  9% {opacity:0;}
-  10% {opacity:.5;}
-  13% {opacity:0;}
-  20% {opacity:.5;}
-  25% {opacity:1;}
+  .welcome-text {
+    font-size: 25px;
+    letter-spacing: 3px;
   }
-  @media only screen and (max-width: 768px) {
-    .flicker {
-      font-size:55px;
-      letter-spacing: 0px;
-    }}
+  
+  .animated-lethalbots {
+    font-size: 55px;
+    letter-spacing: 0px;
+  }
+}
