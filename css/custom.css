@@ -1,0 +1,67 @@
+/* Mobile Only Class */
+@media only screen and (max-width: 768px) {
+    .mobile-only {
+        display: block; /* Or any other mobile-specific styles */
+    }
+    .pc-only {
+        display: none; /* Hide the PC-specific elements on mobile */
+    }
+}
+/* PC Only Class */
+@media only screen and (min-width: 769px) {
+    .pc-only {
+        display: block; /* Or any other PC-specific styles */
+    }
+    .mobile-only {
+        display: none; /* Hide the mobile-specific elements on PC */
+    }
+}
+.home-content h3::before {
+    content: "";
+    display: block;
+    background-color: rgba(236, 0, 140, 0.6);
+    width: 40px;
+    height: 1px;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+}
+.home-content h3 {
+    font-family: metropolis-medium, sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.286;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 3rem;
+    padding-left: 55px;
+    position: relative;
+}
+.h6 {
+    font-family: domine-regular, serif;
+    color: rgb(0, 0, 0);
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizelegibility;
+}
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.s-home {
+    position: relative;
+    height: 100vh; /* Full height for the section */
+    overflow: hidden;
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Ensure the content stays above the video */
+}

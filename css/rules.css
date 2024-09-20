@@ -1,0 +1,72 @@
+.faq-section {
+    background-color: #000000;
+    padding: 40px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.faq-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.faq-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.faq-item {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    
+    /* Adding background image */
+    background-image: url('your-image-path.jpg'); /* Replace with the actual image path */
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.faq-item:hover {
+    background-color: rgba(42, 42, 42, 0.8); /* Semi-transparent overlay to make the text more readable */
+    box-shadow: 0 0 25px #0087cc;
+}
+
+.faq-question {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+}
+
+.faq-question .arrow {
+    font-size: 0.5rem; /* Smaller size for the arrow */
+    transition: transform 0.3s;
+    box-shadow: 0 0 5px #0087cc; /* Shadow effect for the arrow */
+    border-radius: 20%; /* Circular shadow effect */
+    padding: 5px; /* Add some padding to the arrow */
+    border: 0.5px solid;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    text-align: left;
+    color: #cbe2f1; /* Slightly lighter color for the answers */
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Adjust based on content */
+}
+
+.faq-item.active .faq-question .arrow {
+    transform: rotate(180deg);
+}

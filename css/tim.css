@@ -1,0 +1,236 @@
+/* Timeline Section Styles */
+.timeline-section-new {
+    min-height: 100vh;
+    padding-top: 50px;
+    overflow: auto;
+}
+
+@media (max-width: 768px) {
+    .timeline-section-new {
+        padding-top: 10px;
+    }
+}
+
+/* General Heading Styles */
+.heading-primary, .heading-secondary, .heading-tertiary, .heading-quaternary, .heading-quinary, .heading-senary {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Link Styles */
+.link-transition {
+    transition: all 0.2s ease-in-out;
+    color: #504b9f;
+}
+
+.link-transition:hover, .link-transition:focus {
+    text-decoration: none;
+    color: #ffffff;
+    
+}
+
+/* Timeline Section Heading */
+.timeline-heading-new {
+    margin-bottom: 20px;
+    color: #f0f0f0;
+    
+}
+
+.t-date{
+    color: #ededf8;
+    font-size: 1.5rem;
+    margin-top: 5px;
+    margin-left: -10px;
+}
+
+.timeline-experience-new {
+    border-left: 3px solid #504b9f;
+    padding: 0 30px;
+    margin-left: 50%; /* Center items */
+    position: relative; /* Maintain relative positioning */
+}
+@media (max-width: 767px) {
+    .timeline-experience-new {
+        margin-left: 0;
+        padding-right: 0;
+    }
+}
+
+.timeline-experience-new .timeline-item-new {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-experience-new .timeline-item-new::before {
+    content: "";
+    position: absolute;
+    left: -43px;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #000000;
+    border: 3px solid #504b9f;
+}
+
+.timeline-experience-new .timeline-item-new::after {
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: 7px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+/* Adjusted company name styling */
+.timeline-experience-new .timeline-company-name-new {
+    color: #ededf8;
+}
+
+.timeline-experience-new .timeline-job-info-new {
+    position: absolute;
+    left: -240px;
+    top: 0;
+}
+
+@media (max-width: 767px) {
+    .timeline-experience-new .timeline-job-info-new {
+        position: static;
+        margin-bottom: 1rem;
+    }
+    
+    /* Place date at the top on mobile */
+    .timeline-item-new {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .timeline-item-new > .timeline-job-info-new {
+        order: -1;
+    }
+}
+
+.timeline-container-new {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+}
+
+
+@media (max-width: 768px) {
+    .timeline-container-new {
+        width: 90%;
+    }
+}
+
+/* Adding Shadow Effect */
+.timeline-shadow-nohover-new {
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Adjust spacing for smaller screens */
+@media (max-width: 767px) {
+    .timeline-experience-new {
+        margin-left: 0;
+        padding-right: 0;
+    }
+
+    .timeline-experience-new .timeline-item-new {
+        margin-bottom: 20px; /* Decrease space between items */
+        padding-bottom: 0px; /* Decrease bottom padding */
+    }
+
+    .timeline-experience-new .timeline-item-new p {
+        margin-bottom: 5px; /* Reduce space between paragraph and other elements */
+    }
+
+    .timeline-experience-new .timeline-company-name-new {
+        margin-bottom: 5px; /* Reduce space between the company name and next elements */
+    }
+
+    .timeline-experience-new .timeline-job-info-new h4 {
+        margin-bottom: 5px; /* Reduce spacing between the date and the content */
+    }
+
+    /* Adjust the size of timeline circles for better mobile appearance */
+    .timeline-experience-new .timeline-item-new::before {
+        width: 15px; /* Smaller circle */
+        height: 15px;
+        left: -30px; /* Adjust left position for smaller circle */
+    }
+
+    .timeline-experience-new .timeline-item-new::after {
+        width: 8px; /* Smaller inner circle */
+        height: 8px;
+        left: -28px;
+    }
+}
+
+
+/* Base styles are applied above */
+
+/* For tablets and small desktops */
+@media (max-width: 1024px) {
+    .faq-container {
+        grid-template-columns: 1fr; /* Stacks items in a single column */
+    }
+
+    .faq-item {
+        padding: 20px; /* Adjust padding for smaller screens */
+        background-size: contain; /* Ensure the image is not cropped */
+    }
+
+    .faq-question {
+        font-size: 1.25rem; /* Slightly smaller text */
+    }
+
+    .faq-answer {
+        font-size: 1.25rem; /* Slightly smaller text */
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .faq-container {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .faq-item {
+        padding: 15px; /* Further reduce padding */
+        background-size: contain; /* Ensure the image fits well */
+    }
+
+    .faq-question {
+        font-size: 1.1rem; /* Smaller text for mobile */
+    }
+
+    .faq-answer {
+        font-size: 1.1rem; /* Smaller text for mobile */
+    }
+}
+
+/* For very small screens (extra small devices) */
+@media (max-width: 480px) {
+    .faq-section h2 {
+        font-size: 2rem; /* Smaller heading for extra small screens */
+    }
+
+    .faq-question {
+        font-size: 1rem; /* Smaller question text */
+    }
+
+    .faq-answer {
+        font-size: 1rem; /* Smaller answer text */
+    }
+}
