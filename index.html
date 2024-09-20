@@ -160,6 +160,31 @@
     </div>
     <!-- end s-home -->
 
+    <!-- About Section -->
+    <section id="about" class="s-about-n pc-only">
+        <div id="particles-container">
+            <!-- Particle canvas will go here -->
+        </div>
+        <div class="animated-border">
+            <span></span><span></span><span></span><span></span>
+            <div class="abt-content">
+                <h3 class="subhead">About</h3><br class="mobile-only">
+                <div class="para">
+                    
+                    <h1 class="display-1">LETHALBOTS</h1>
+                    <p>
+                        Get ready to witness the ultimate clash of robotics as SLTC Research University hosts the highly
+                        anticipated Lethal Bots 2024 competition. This event promises to be an exhilarating showcase of
+                        engineering prowess, innovation, and strategic thinking. Join us in the arena where the future
+                        of robotic comes alive. Let's embark on this thrilling journey together!
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <!-- About Section end -->
+
     <!-- Rules and Regulations --><!-- Rules and Regulations --><!-- Rules and Regulations -->
     <div class="faq-section" data-aos="fade-up">
         <h1>Rules and Regulations</h1>
@@ -489,6 +514,20 @@
     <script src="js/count.js"></script>
     <script src="js/galleryvievmore.js"></script>
     <script src="js/rules.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jnicol/particleground/jquery.particleground.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#particles-container').particleground({
+                dotColor: '#5cbdaa',
+                lineColor: '#5cbdaa',
+                density: 10000, // You can adjust this to control the number of particles
+                particleRadius: 7, // Adjust size of the particles
+                proximity: 100, // How close two particles need to be before they connect with a line
+            });
+        });
+    </script>
 
 
 
