@@ -1,0 +1,235 @@
+/* General Styles */
+.para{
+    margin-top: 12%;
+}
+
+
+/* Importing SF TransRobotics font */
+@font-face {
+    font-family: 'SF TransRobotics';
+    src: url('fonts/SFTransRobotics.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* New styles for particle container */
+#particles-container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    top: 0;
+    margin-top: 140px;
+}
+
+
+
+
+/* Ensure the content is positioned above the particle background */
+.animated-border {
+    position: relative;
+    z-index: 1;
+}
+
+/* Optional: Adjust the background color for better contrast */
+.s-about-n {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden; /* Ensure that the content stays within bounds */
+}
+
+/* Make the particle canvas full screen */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+}
+
+
+.animated-border {
+    position: relative;
+    margin-top: 170px;
+    padding: 10px;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.096); /* White color with 30% opacity */
+    backdrop-filter: blur(5px); /* Apply a 30px blur */
+    display: inline-block;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 950px;
+    height: 400px;
+    /* Set max-width for large screens */
+}
+
+/* Metallic Edge Border */
+.animated-border:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    padding: 2px;
+    background: linear-gradient(45deg, #2ec6e0, #909496, #2ec6e0, #909496);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+/* Animation Spans */
+.animated-border span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #171618, #ffffff);
+    animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.animated-border span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to bottom, #171618, #d11865);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.animated-border span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, #171618, #ffffff);
+    animation: animate3 2s linear infinite;
+}
+
+@keyframes animate3 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animated-border span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to top, #171618, #d11865);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+
+/* abt-content Styles */
+.abt-content {
+    color: #ffffff;
+    padding: 10px;
+    /* Added padding to ensure proper spacing */
+}
+
+.subhead {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2ec6e0;
+    text-transform: uppercase;
+    margin-bottom: -50px;
+    font-family: 'SF TransRobotics', sans-serif;
+}
+
+.display-1 {
+    font-family: 'SF TransRobotics', sans-serif;
+    margin-bottom: 15px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #909496;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+}
+
+p {
+    font-size: 16px;
+    color: #e0e0e0;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-transform: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .animated-border {
+        padding: 20px;
+        /* Reduce padding on smaller screens */
+    }
+
+    .display-1 {
+        font-size: 28px;
+        /* Adjust font size for headings */
+    }
+
+    p {
+        font-size: 14px;
+        /* Reduce paragraph text size */
+    }
+}
+
+@media (max-width: 480px) {
+    .animated-border {
+        padding: 15px;
+        /* Further reduce padding on very small screens */
+    }
+
+    .display-1 {
+        font-size: 22px;
+        /* Further adjust heading size */
+    }
+
+    p {
+        font-size: 12px;
+        /* Smaller text for small devices */
+    }
+}
