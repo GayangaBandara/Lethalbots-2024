@@ -212,22 +212,26 @@
     }
 
     .faq-question {
-        font-size: 1.1rem; /* Smaller text for mobile */
+        font-size: 15px;
+        text-align: left; /* Smaller text for mobile */
     }
 
     .faq-answer {
-        font-size: 1.1rem; /* Smaller text for mobile */
+        font-size: 15px;
+        text-align: left; /* Smaller text for mobile */
     }
 }
 
 /* For very small screens (extra small devices) */
 @media (max-width: 480px) {
     .faq-section h2 {
-        font-size: 2rem; /* Smaller heading for extra small screens */
+        font-size: 15px;
+        text-align: left; /* Smaller heading for extra small screens */
     }
 
     .faq-question {
-        font-size: 1rem; /* Smaller question text */
+        font-size: 15px;
+        text-align: left; /* Smaller question text */
     }
 
     .faq-answer {
