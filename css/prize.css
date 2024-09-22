@@ -2,29 +2,20 @@
     font-family: 'Exo 2', sans-serif;
     background-color: rgba(0, 0, 0, 0.8); /* Fallback background color */
     color: #ffffff;
-    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
+    background: url('/images/bot1.jpg') no-repeat center center;
+    background-size: cover;
+    /* Adjust the opacity to your preference */
+    z-index: -1; 
+    
+    /* overflow: hidden; */
 }
 
 /* Adding the background image using a pseudo-element */
-.section_pr::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('/images/bot1.jpg') no-repeat center center;
-    background-size: cover;
-    opacity: 200%; /* Adjust the opacity to your preference */
-    z-index: -1; /* Make sure it stays behind the content */
-}
 
 .container_pr {
+    display: block;
     text-align: center;
     backdrop-filter: blur(5px); /* Adds frosted glass effect */
     padding: 20px;
@@ -182,6 +173,7 @@ h1 {
     .amount_pr {
         font-size: 1.7em;
     }
+    
 }
 
 @media (max-width: 767px) {
@@ -192,6 +184,7 @@ h1 {
     .prize_pr {
         width: 75%;
         margin-bottom: 20px;
+        
     }
 }
 
@@ -228,3 +221,4 @@ h1 {
         font-size: 1.5em;
     }
 }
+
