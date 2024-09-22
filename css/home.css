@@ -131,17 +131,21 @@ a {
 
 @media only screen and (max-width: 768px) {
   .flicker {
-    font-size: 55px;
-    letter-spacing: 0px;
+    -webkit-animation: flicker 2s infinite;
+    text-align:center;
+    margin-top:10px;
+    margin-bottom: 10px;
+    font-family: 'Transformers', sans-serif;
+    font-size:40px;
   }
   
-  .welcome-text {
-    font-size: 25px;
-    letter-spacing: 3px;
-  }
-  
-  .animated-lethalbots {
-    font-size: 55px;
-    letter-spacing: 0px;
+  @-webkit-keyframes flicker
+  {
+  0% {opacity:0;}
+  9% {opacity:0;}
+  10% {opacity:.5;}
+  13% {opacity:0;}
+  20% {opacity:.5;}
+  25% {opacity:1;}
   }
 }
