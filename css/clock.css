@@ -36,9 +36,10 @@
     font-family: 'Game Font 7', sans-serif;
     font-weight:500;
     transform:scaleY(1.8);
-    color:#92aabd;
+    color:#00fff2;
     font-size: 3rem;
 }
+
 @media only screen and (max-width: 768px) {
     .bbedde {
         width: 80px;
