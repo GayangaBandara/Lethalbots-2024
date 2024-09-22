@@ -50,10 +50,36 @@
     ================================================== -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script>
+        window.addEventListener('load', function() {
+    var loadingScreen = document.getElementById('loading-screen');
+    var content = document.getElementById('content');
+
+    // Hide the loading screen
+    loadingScreen.style.display = 'none';
+    
+    // Show the main content
+    content.style.display = 'block';
+});
+    </script>
 
 </head>
 
 <body id="top">
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale-pulse-out">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
 
     <!-- header
     ================================================== -->
@@ -528,19 +554,7 @@
     </div> <!-- end photoSwipe background -->
 
 
-    <!-- preloader
-    ================================================== -->
-    <div id="preloader">
-        <div id="loader">
-            <div class="line-scale-pulse-out">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-    </div>
+    
 
 
     <!-- Java Script
