@@ -83,7 +83,6 @@ canvas {
     inset: 0;
     border-radius: 10px;
     padding: 2px;
-    background: linear-gradient(45deg, #2ec6e0, #909496, #2ec6e0, #909496);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
