@@ -235,6 +235,7 @@
     }
 
     .faq-answer {
-        font-size: 1rem; /* Smaller answer text */
+       font-size: 15px;
+       text-align: left; /* Smaller answer text */
     }
 }
