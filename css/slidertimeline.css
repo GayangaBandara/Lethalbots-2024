@@ -1,0 +1,122 @@
+
+
+.newphoto {
+    background: var(--surface-2);
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -60px;
+    /* 	overflow: hidden; */
+}
+
+.photo-block {
+    position: sticky;
+    top: calc(50% - 30vh);
+    height: 800px;
+    width: 100%;
+    display: grid;
+    overflow: hidden;
+}
+
+.photo-grid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(38deg);
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+}
+
+.photo::before {
+    content: '';
+    height: 110%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.824);
+    
+    /* Adjust the opacity (0.5) as needed */
+    z-index: 1;
+}
+
+.photo {
+    aspect-ratio: 3 / 4;
+    width: 20vmax;
+
+}
+
+.collage {
+    view-timeline: --collage;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.photo:nth-of-type(7n + 1):nth-of-type(even),
+.photo:nth-of-type(7n + 3):nth-of-type(even),
+.photo:nth-of-type(7n + 5):nth-of-type(even),
+.photo:nth-of-type(7n + 7):nth-of-type(even) {
+    --vertical: -100%;
+    --horizontal: 100%;
+}
+
+.photo:nth-of-type(7n + 1):nth-of-type(odd),
+.photo:nth-of-type(7n + 3):nth-of-type(odd),
+.photo:nth-of-type(7n + 5):nth-of-type(odd),
+.photo:nth-of-type(7n + 7):nth-of-type(odd) {
+    --vertical: -100%;
+    --horizontal: -100%;
+}
+
+.photo:nth-of-type(7n + 2):nth-of-type(even),
+.photo:nth-of-type(7n + 4):nth-of-type(even),
+.photo:nth-of-type(7n + 6):nth-of-type(even) {
+    --vertical: 100%;
+    --horizontal: -100%;
+}
+
+.photo:nth-of-type(7n + 2):nth-of-type(odd),
+.photo:nth-of-type(7n + 4):nth-of-type(odd),
+.photo:nth-of-type(7n + 6):nth-of-type(odd) {
+    --vertical: 100%;
+    --horizontal: 100%;
+}
+
+.photo {
+    animation-name: travel;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-timeline: --collage;
+    animation-range: entry 100% exit 0%;
+}
+
+@keyframes travel {
+    0% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 var(--vertical);
+    }
+
+    100% {
+        translate: var(--horizontal) var(--vertical);
+    }
+}
+
+/* Debugging ViewTimeline Indicator */
+
+
+@keyframes indicate {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* End debugging timelines */
