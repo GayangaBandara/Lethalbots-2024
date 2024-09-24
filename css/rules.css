@@ -37,6 +37,7 @@
 }
 
 .faq-question {
+    font-family: 'Marmelat', sans-serif;
     font-size: 1.5rem;
     display: flex;
     justify-content: space-between;
@@ -54,6 +55,7 @@
 }
 
 .faq-answer {
+    font-family: 'Marmelat', sans-serif;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
