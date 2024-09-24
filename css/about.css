@@ -12,6 +12,8 @@
     font-style: normal;
 }
 
+@import url('https://fonts.cdnfonts.com/css/game-font-7');
+
 /* New styles for particle container */
 #particles-container {
     position: absolute;
@@ -175,7 +177,7 @@ canvas {
     color: #2ec6e0;
     text-transform: uppercase;
     margin-bottom: -50px;
-    font-family: 'SF TransRobotics', sans-serif;
+    font-family: 'Game Font 7', sans-serif;
 }
 
 .display-1 {
@@ -190,6 +192,7 @@ canvas {
 }
 
 p {
+    font-family: 'Transformers', sans-serif;
     font-size: 16px;
     color: #e0e0e0;
     max-width: 800px;
@@ -370,12 +373,12 @@ p {
     }
     
     .subhead {
+        font-family: 'Game Font 7', sans-serif;
         font-size: 18px;
         font-weight: 600;
         color: #2ec6e0;
         text-transform: uppercase;
         margin-bottom: -50px;
-        font-family: 'SF TransRobotics', sans-serif;
     }
     
     .display-1 {
@@ -390,6 +393,7 @@ p {
     }
     
     p {
+        font-family: 'Transformers', sans-serif;
         font-size: 12px;
         color: #e0e0e0;
         max-width: 800px;
@@ -539,7 +543,7 @@ p {
         color: #2ec6e0;
         text-transform: uppercase;
         margin-bottom: -50px;
-        font-family: 'SF TransRobotics', sans-serif;
+        font-family: 'Game Font 7', sans-serif;
     }
     
     .display-1 {
