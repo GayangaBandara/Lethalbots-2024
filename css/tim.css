@@ -1,3 +1,6 @@
+@import url('https://fonts.cdnfonts.com/css/marmelat');
+
+
 /* Timeline Section Styles */
 .timeline-section-new {
     min-height: 100vh;
@@ -37,6 +40,10 @@
     
 }
 
+.tim-p{
+    font-family: 'Marmelat', sans-serif;
+}
+
 .t-date{
     color: #ededf8;
     font-size: 1.5rem;
@@ -53,7 +60,7 @@
 @media (max-width: 767px) {
     .timeline-experience-new {
         margin-left: 0;
-        padding-right: 0;
+        padding: 0 24px;
     }
 }
 
@@ -99,7 +106,7 @@
 @media (max-width: 767px) {
     .timeline-experience-new .timeline-job-info-new {
         position: static;
-        margin-bottom: 1rem;
+        margin-bottom: -3rem;
     }
     
     /* Place date at the top on mobile */
