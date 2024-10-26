@@ -1,12 +1,13 @@
 .marquee {
-    display: flex;
+    display:flex;
+    align-items: center;
     block-size: var(--marquee-item-height);
     margin-block: var(--marquee-item-height);
-    margin-top: 20px;
+    margin-top: -110px;
     background-color: #00000000;
-    margin-bottom: 10px;
+    margin-bottom: -60px;
     position: relative;
-    overflow-x: hidden;
+    overflow-x:hidden;
     mask-image: linear-gradient(
       to right,
       hsl(0 0% 0% / 0),
@@ -17,8 +18,8 @@
 }
 
 .marquee--5 {
-    --marquee-item-width: 100px;
-    --marquee-item-height: 100px;
+    --marquee-item-width: 250px;
+    --marquee-item-height: 250px;
     --marquee-duration: 36s;
     --marquee-items: 4;
     --margin-right: 40px;
@@ -38,19 +39,19 @@
 }
 
 .marquee__item:nth-child(4n) {
-    border-top-right-radius: 1rem;
+    border-top-right-radius: 0rem;
 }
 
 .marquee__item:nth-child(4n + 1) {
-    border-bottom-right-radius: 1rem;
+    border-bottom-right-radius: 0rem;
 }
 
 .marquee__item:nth-child(4n + 2) {
-    border-bottom-left-radius: 1rem;
+    border-bottom-left-radius: 0rem;
 }
 
 .marquee__item:nth-child(4n + 3) {
-    border-top-left-radius: 1rem;
+    border-top-left-radius: 0rem;
 }
 
 .marquee--5 .marquee__item:nth-of-type(1) {
