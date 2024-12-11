@@ -1,0 +1,25 @@
+.sponsors {
+    text-align: center;
+    padding: 20px;
+}
+.sponsors h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.sponsors-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.sponsors-images img {
+    width: 250px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.sponsors-images img:hover {
+    transform: scale(1.1);
+}
