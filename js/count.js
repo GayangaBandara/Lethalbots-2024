@@ -1,7 +1,5 @@
 // Set the date we're counting down to (e.g., a launch date)
 
-var countDownDate = new Date("Dec 14, 2024 00:00:00").getTime(); // Adjust the date as needed
-
 var countDownDate = new Date("Dec 15, 2024 17:00:00").getTime(); // Adjust the date as needed
 
 // Update the countdown every 1 second
